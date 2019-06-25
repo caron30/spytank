@@ -6,6 +6,7 @@
 # a : stop  
 # c : exit
 
+import click
 import spytank
 import time 
 
@@ -15,9 +16,9 @@ print("entre une lettre pour piloter le comme dans la description")
 continuer =  True
 while continuer: 
         
-    lettre = input(">>")
+    lettre = click.getchar()
 
-    vitesse= 200
+    vitesse = 255
        
     if lettre == "z" : 
         spytank.avance(vitesse)
